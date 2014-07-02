@@ -5,7 +5,7 @@ public class StringCalculator
 		return true;
 	}
 
-	public int Add(String numbers)
+	public int Add(string numbers)
 	{
 		return 0;
 	}
