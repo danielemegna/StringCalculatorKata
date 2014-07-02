@@ -40,4 +40,20 @@ public class TestStringCalculator
 		Assert.assertEquals(3, sc.Add("1,2"));
 	}
 
+  @Test
+  public void scAddWithSingleNumbersShouldReturnIntValue()
+  {
+    Assert.assertEquals(2, sc.Add("2"));
+    Assert.assertEquals(5, sc.Add("5"));
+    Assert.assertEquals(23, sc.Add("23"));
+    Assert.assertEquals(160, sc.Add("160"));
+  }
+
+  @Test
+  public void scAddWithPairOfNumberShouldReturnSumValue()
+  { 
+    Assert.assertEquals(5, sc.Add("3,2"));
+    
+  }
+
 }

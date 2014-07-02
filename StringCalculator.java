@@ -10,11 +10,7 @@ public class StringCalculator
 		if(numbers == "")
 			return 0;
 
-		if(numbers == "1")
-      return Integer.parseInt(numbers);
-		
-
-		if(numbers == "1,2"){
+		if(numbers.contains(",")) {
 			
       String[] parts = numbers.split(",");
       
@@ -24,6 +20,6 @@ public class StringCalculator
       return part0+part1;
     }
 
-		return -1;
+    return Integer.parseInt(numbers);
 	}
 }
