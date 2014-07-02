@@ -20,10 +20,20 @@ public class StringCalculator
     String[] parts = numbers.split(sep + "|\n");
 
     int sum = 0;
-    for(String part:parts) {
-      sum += Integer.parseInt(part);
-    }
+    String exceptionMessage = "negatives not allowed";
 
+    for(String part:parts) {
+      int n = Integer.parseInt(part);
+
+      if(n < 0)
+        exceptionMessage += (" " + Integer.toString(n));
+
+      sum += n;
+    }
+  
+    if(exceptionMessage != "negatives not allowed")
+      throw new RuntimeException(exceptionMessage);
+        
     return sum;
 	}
 }

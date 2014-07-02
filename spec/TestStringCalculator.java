@@ -86,5 +86,29 @@ public class TestStringCalculator
     Assert.assertEquals(14, sc.Add("//#\n9#5"));
     Assert.assertEquals(23, sc.Add("// \n17 6"));
   }
+  
+  @Test
+  public void scAddWithNegativeNumbersShouldThrowsAnException()
+  {
+    try
+    {
+      sc.Add("-5");
+      Assert.fail("Should have thrown RuntimeException but did not!");
+    }
+    catch(RuntimeException ex)
+    {
+      Assert.assertEquals("negatives not allowed -5", ex.getMessage());
+    }
+
+    try
+    {
+      sc.Add("-7,3,-1");
+      Assert.fail("Should have thrown RuntimeException but did not!");
+    }
+    catch(RuntimeException ex)
+    {
+      Assert.assertEquals("negatives not allowed -7 -1", ex.getMessage());
+    }
+  }
 
 }
