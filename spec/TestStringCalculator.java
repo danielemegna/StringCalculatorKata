@@ -83,8 +83,8 @@ public class TestStringCalculator
   public void scAddWithDifferentDelimiterShouldWorks()
   {
     Assert.assertEquals(10, sc.Add("//;\n6;4"));
-    //Assert.assertEquals(14, sc.Add("//#\n9#5"));
-    //Assert.assertEquals(23, sc.Add("// \n17 6"));
+    Assert.assertEquals(14, sc.Add("//#\n9#5"));
+    Assert.assertEquals(23, sc.Add("// \n17 6"));
   }
 
 }

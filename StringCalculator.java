@@ -11,31 +11,19 @@ public class StringCalculator
 		if(numbers == "")
 			return 0;
 
+    String sep = ",";
     if(numbers.startsWith("//")) {
-      String sep = numbers.substring(2,3);
-      
+      sep = numbers.substring(2,3);
       numbers = numbers.substring(4);
-      String[] parts = numbers.split(sep);
-
-      int sum = 0;
-      for(String part:parts) {
-        sum += Integer.parseInt(part);
-      }
-
-      return sum;
     }
-    
-		if(numbers.contains(",") || numbers.contains("\n")) {
-      String[] parts = numbers.split(",|\n");
+     
+    String[] parts = numbers.split(sep + "|\n");
 
-      int sum = 0;
-      for(String part:parts) {
-        sum += Integer.parseInt(part);
-      }
-
-      return sum;
+    int sum = 0;
+    for(String part:parts) {
+      sum += Integer.parseInt(part);
     }
 
-    return Integer.parseInt(numbers);
+    return sum;
 	}
 }
