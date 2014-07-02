@@ -11,13 +11,14 @@ public class StringCalculator
 			return 0;
 
 		if(numbers.contains(",")) {
-			
       String[] parts = numbers.split(",");
-      
-      int part0 = Integer.parseInt(parts[0]);
-      int part1 = Integer.parseInt(parts[1]);
-      
-      return part0+part1;
+
+      int sum = 0;
+      for(String part:parts) {
+        sum += Integer.parseInt(part);
+      }
+
+      return sum;
     }
 
     return Integer.parseInt(numbers);

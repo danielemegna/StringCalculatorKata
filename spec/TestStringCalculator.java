@@ -43,6 +43,7 @@ public class TestStringCalculator
   @Test
   public void scAddWithSingleNumbersShouldReturnIntValue()
   {
+    Assert.assertEquals(0, sc.Add("0"));
     Assert.assertEquals(2, sc.Add("2"));
     Assert.assertEquals(5, sc.Add("5"));
     Assert.assertEquals(23, sc.Add("23"));
@@ -56,7 +57,18 @@ public class TestStringCalculator
     Assert.assertEquals(8, sc.Add("5,3"));
     Assert.assertEquals(16, sc.Add("8,8"));
     Assert.assertEquals(273, sc.Add("273,0"));
-    
+  }
+
+  @Test
+  public void scAddWithThreeNumbersShouldReturnSumValue()
+  {
+    Assert.assertEquals(7, sc.Add("1,2,4")); 
+    Assert.assertEquals(12, sc.Add("3,4,5")); 
+    Assert.assertEquals(32, sc.Add("16,16,0")); 
+    Assert.assertEquals(0, sc.Add("1,-1,0")); 
+    Assert.assertEquals(256, sc.Add("16,40,200")); 
+    Assert.assertEquals(-5, sc.Add("100,-90,-15")); 
+
   }
 
 }
