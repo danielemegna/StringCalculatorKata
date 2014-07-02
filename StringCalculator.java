@@ -5,8 +5,11 @@ public class StringCalculator
 		return true;
 	}
 
-	public int Add(string numbers)
+	public int Add(String numbers)
 	{
-		return 0;
+		if(numbers == "")
+			return 0;
+
+		return 1;
 	}
 }

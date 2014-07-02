@@ -22,4 +22,11 @@ public class TestStringCalculator
 		StringCalculator sc = new StringCalculator();
 		Assert.assertEquals(0, sc.Add(""));
 	}
+
+	@Test
+	public void scAddWithOneShouldReturnOne()
+	{
+		StringCalculator sc = new StringCalculator();
+		Assert.assertEquals(1, sc.Add("1"));
+	}
 }
