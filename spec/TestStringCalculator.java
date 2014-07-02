@@ -65,9 +65,9 @@ public class TestStringCalculator
     Assert.assertEquals(7, sc.Add("1,2,4")); 
     Assert.assertEquals(12, sc.Add("3,4,5")); 
     Assert.assertEquals(32, sc.Add("16,16,0")); 
-    Assert.assertEquals(0, sc.Add("1,-1,0")); 
+    Assert.assertEquals(0, sc.Add("0,0,0")); 
     Assert.assertEquals(256, sc.Add("16,40,200")); 
-    Assert.assertEquals(-5, sc.Add("100,-90,-15")); 
+    Assert.assertEquals(205, sc.Add("100,90,15")); 
 
   }
 
