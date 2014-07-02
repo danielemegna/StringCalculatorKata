@@ -10,8 +10,8 @@ public class StringCalculator
 		if(numbers == "")
 			return 0;
 
-		if(numbers.contains(",")) {
-      String[] parts = numbers.split(",");
+		if(numbers.contains(",") || numbers.contains("\n")) {
+      String[] parts = numbers.split(",|\n");
 
       int sum = 0;
       for(String part:parts) {

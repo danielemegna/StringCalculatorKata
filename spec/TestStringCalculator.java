@@ -71,4 +71,12 @@ public class TestStringCalculator
 
   }
 
+  @Test
+  public void scAddWithNewlineDelimitersShouldWorkProperly()
+  {
+    Assert.assertEquals(6, sc.Add("1\n2,3"));
+    Assert.assertEquals(9, sc.Add("4\n2\n3"));
+    Assert.assertEquals(5, sc.Add("2,2\n1"));
+  }
+
 }
