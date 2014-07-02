@@ -17,12 +17,6 @@ public class TestStringCalculator
     }
 
   @Test
-    public void stringCalculatorReturnMeTrueShouldReturnTrue()
-    {
-      Assert.assertTrue(sc.ReturnMeTrue());
-    }
-
-  @Test
     public void stringCalculatorAddMethodWithEmptyStringShouldReturnZero()
     {
       Assert.assertEquals(0, sc.Add(""));
