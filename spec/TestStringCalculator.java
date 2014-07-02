@@ -2,6 +2,13 @@ import org.junit.*;
 
 public class TestStringCalculator
 {
+	private StringCalculator sc;
+
+	@Before
+	public void init()
+	{
+		sc = new StringCalculator();
+	}
 
 	@Test
 	public void assertingThatTrueIsTrue()
@@ -12,21 +19,21 @@ public class TestStringCalculator
 	@Test
 	public void stringCalculatorReturnMeTrueShouldReturnTrue()
 	{
-		StringCalculator sc = new StringCalculator();
 		Assert.assertTrue(sc.ReturnMeTrue());
 	}
 
 	@Test
 	public void stringCalculatorAddMethodWithEmptyStringShouldReturnZero()
 	{
-		StringCalculator sc = new StringCalculator();
 		Assert.assertEquals(0, sc.Add(""));
 	}
 
 	@Test
 	public void scAddWithOneShouldReturnOne()
 	{
-		StringCalculator sc = new StringCalculator();
 		Assert.assertEquals(1, sc.Add("1"));
 	}
+
+	//public void scAddWithOneAndTwoShouldReturnThree()
+
 }
