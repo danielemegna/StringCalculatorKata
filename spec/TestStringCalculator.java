@@ -53,6 +53,9 @@ public class TestStringCalculator
   public void scAddWithPairOfNumberShouldReturnSumValue()
   { 
     Assert.assertEquals(5, sc.Add("3,2"));
+    Assert.assertEquals(8, sc.Add("5,3"));
+    Assert.assertEquals(16, sc.Add("8,8"));
+    Assert.assertEquals(273, sc.Add("273,0"));
     
   }
 
