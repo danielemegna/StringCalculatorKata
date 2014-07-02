@@ -34,6 +34,10 @@ public class TestStringCalculator
 		Assert.assertEquals(1, sc.Add("1"));
 	}
 
-	//public void scAddWithOneAndTwoShouldReturnThree()
+	@Test
+	public void scAddWithOneAndTwoShouldReturnThree()
+	{
+		Assert.assertEquals(3, sc.Add("1,2"));
+	}
 
 }
