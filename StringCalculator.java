@@ -1,22 +1,22 @@
 public class StringCalculator
 {
-	public boolean ReturnMeTrue()
-	{
-		return true;
-	}
+  public boolean ReturnMeTrue()
+  {
+    return true;
+  }
 
-	public int Add(String numbers)
-	{
-    
-		if(numbers == "")
-			return 0;
+  public int Add(String numbers)
+  {
+
+    if(numbers == "")
+      return 0;
 
     String sep = ",";
     if(numbers.startsWith("//")) {
       sep = numbers.substring(2,3);
       numbers = numbers.substring(4);
     }
-     
+
     String[] parts = numbers.split(sep + "|\n");
 
     int sum = 0;
@@ -30,10 +30,10 @@ public class StringCalculator
 
       sum += n;
     }
-  
+
     if(exceptionMessage != "negatives not allowed")
       throw new RuntimeException(exceptionMessage);
-        
+
     return sum;
-	}
+  }
 }
