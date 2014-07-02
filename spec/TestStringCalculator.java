@@ -79,4 +79,12 @@ public class TestStringCalculator
     Assert.assertEquals(5, sc.Add("2,2\n1"));
   }
 
+  @Test
+  public void scAddWithDifferentDelimiterShouldWorks()
+  {
+    Assert.assertEquals(10, sc.Add("//;\n6;4"));
+    //Assert.assertEquals(14, sc.Add("//#\n9#5"));
+    //Assert.assertEquals(23, sc.Add("// \n17 6"));
+  }
+
 }
